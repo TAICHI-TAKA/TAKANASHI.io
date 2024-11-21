@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+/* 基本色 */
+:root{
+        --main-color: #5D9AB2;
+        --accent-color: #BF6A7A;
+        --dark-color: #2B5566;
+
+        /* テキストを白色にする 53P */
+        --text-bright-color:#fff;
+
+        /* 横幅の最大値を指定する 80P */
+        --large-width: 1700px;
+
+    }
+
+/* 基本設定:: ページ全体 */
+body {
+    
+        /* 画像を画面の横幅いっぱいに表示 50P */
+        margin: 0;
+
+    font-family: "メイリオ",
+        "Hiragino Kaku Gothic Pro",
+        sans-serif;
+
+    }
+
+/* コンテンツA: ヒーローイメージ */
+.conA {
+        /* 背景画像として画像を表示する 49P */
+        /* 半透明な黒色の画像を重ねてトーンを落とす 54P */
+        background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(img/classA.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;   
+
+        /* 画像を画面の高さいっぱいに表示する 50P */
+        height: 100vh;
+
+        /* 最小限確保する高さを指定する 51P */
+        min-height: 450px;
+
+        /* テキストを画像の中央配置にする 52P */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* テキストを白色をする 53P */
+        color:#fff;
+        color:var(--text-bright-color);
+
+    text-align: center;
+}
+
+.conA h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: "ロボト",sans-serif;
+    font-size: 15vw;
+    letter-spacing: 0.2em;
+    margin-left: 0.2em;
+}
+
+.conA p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18%;
+}
+
+@media (min-width: 768px){
+    .conA h1{
+            font-size: 115px;
+    }
+
+    .conA p{
+        font-size: 24px;
+    }
+} 
+
+/* コンテンツC:概要(アイコン+テキスト) */
+.conC{
+        /* ブロックに色を付ける 88P */
+        background-color: #5D9AB2;
+        background-color:  var(--main-color);
+        color: #fff;
+        color: var(--text-bright-color);
+}
+
+.conC .text{
+        /* テキストのまわりに余白を入れる 92P */
+        padding: 50px;
+}
+.conC h2{
+        /* 見出しと文章のデザインを指定する 68P */
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 20px;
+}
+
+.conC p{
+        /* 見出しと文章のデザインを指定する 68P */
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.8;
+        opacity: 0.8;
+}
+
+.botan a{
+        /* リンクのデザインを指定する 69P */
+        color: #5D9AB2;
+        color: var(--main-color);
+        text-decoration: none;
+
+        /* リンクをボタンの形にする 87P */
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 30px;
+        border: solid 3px currentColor;
+        border-radius: 6px;
+        background-color: #BF6A7A;
+        background-color: var(--accent-color);
+        color: #fff;
+        color: var(--text-bright-color);
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+.botan a:hover{
+        /* リンクのデザインを指定する 69P */
+        text-decoration: underline;
+
+        /* リンクをボタンの形にする 87P */
+        background-image: linear-gradient(
+            rgba(255,255,255,0.2),
+            rgba(255,255,255,0.2)
+        );
+    }
+
+.conC .photo{
+        /* 画像を表示する 89P */
+        min-height: 300px;
+        background-image: url(img/ore.JPG);
+        background-position: center;
+        background-size: cover;
+}
+
+@media (min-width:768px){
+        /* 画像とテキストを横に並べる 91P */
+        .conC .container{
+            display: flex;
+            /* コンテンツBと横幅を揃える 93P */
+            max-width: 2000px;
+            max-width: var(--large-width);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .conC .photo{
+            flex: 3;
+        }
+
+        .conC .text{
+            flex: 2;
+        /* テキストのまわりに余白を入れる 92P */
+        padding: 20px;
+        }
+}
