@@ -335,6 +335,11 @@ footer .container{
     padding:  40px 20px;
 }
 
+/* 見出しに下線を付けたデザインにする 120P */
+.footA {
+    margin-bottom: 30px;
+}
+
 /* 見出しと段落のデザインを指定する 112P */
 .footA h2{
     margin-top: 0;
@@ -354,4 +359,47 @@ footer .container{
 .footA a{
     color: inherit;
     text-decoration: none;
+}
+
+/* フッターメニューの上下の間隔ｗ調整する 126P */
+.footB div {
+    margin-bottom: 20px;
+}
+
+/* 見出しに下線を付けたデザインにする 120P */
+.footB h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom:  solid 1px currentColor;
+    font-size: 14px;
+}
+
+/* メニューの項目のデザインを指定する 121P*/
+.footB ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footB a {
+    /* リンクを大きくする 123P */
+    display: block;
+    padding: 5px;
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footB a:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
+@media (min-width: 768p){
+    .footB {
+        display: flex;
+    }
+
+    .footB div {
+        flex: 1;
+    }
 }
