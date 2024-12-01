@@ -192,9 +192,10 @@ header{
     max-width: var(--large-width);
     margin-left: auto;
     margin-right: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    }
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 60vh;
+}
     
 
     .imgOYA{
@@ -202,7 +203,7 @@ header{
     }
 
     .container img{
-    width: 600px;
+    width: 500px;
     height: auto;
     justify-content: space-around;
     border: solid 5px  #DF6A7A;
@@ -260,16 +261,19 @@ header{
     max-width: var(--large-width);
     margin-left: auto;
     margin-right: auto;
-    }
+    height: 60vh;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
 
     .container img{
-    width: 500px;
+    width: 550px;
     height: auto;
     }
 
     .text {
     font-size: 20px;
-    padding-right: 600px;
+    padding-right: 500px;
     } 
 }
 }
@@ -277,8 +281,7 @@ header{
 /* コンテンツC:概要(アイコン+テキスト) */
 .conD{
     /* ブロックに色を付ける 88P */
-    background-color: #2ac3ce;
-    color: #fff;
+    background-color: #5D9AB2;
     
     .container{
             display: flex;
@@ -287,13 +290,13 @@ header{
             max-width: var(--large-width);
             margin-left: auto;
             margin-right: auto;
-            height: 50vh;
+            height: 60vh;
 
         }
         .card{
-            width: 300px;
-            height: 315px;
-            border: 1px solid lightgray;
+            width: 500px;
+            height: 500px;
+            border: 5px solid #DF6A7A;
         }
 
         .card:nth-child(2){
@@ -303,24 +306,52 @@ header{
 
         .picture img{
             width: 100%;
-            height: 200px;
+            height: 300px;
         }
 
         .description{
             width: 100%;
-            height: 145px;
+            height: 192px;
             padding-right: 12px;
             padding-left: 12px;
             box-sizing: border-box;
+            font-size: 20px;
+            background-color: #fff;
+            padding-top: 5px;
+        }
 
-        .description p{
-            font-size: 50px;
-            color: dimgray;
-        }
-        }
-        .container img{
-        border-radius: 5px;
-    }
 }
 
+/* フッターの色を指定する 115P */
+footer {
+    color: #fff;
+    color: var(--text-bright-color);
+    background-color: #2B5566;
+    background-color: var(--dark-color);
+}
 
+/* フッター内の余白サイズを指定する 115P */
+footer .container{
+    padding:  40px 20px;
+}
+
+/* 見出しと段落のデザインを指定する 112P */
+.footA h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: "ロボト",sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+}
+
+.footA p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+/* リンクのデザインを指定する 113P */
+.footA a{
+    color: inherit;
+    text-decoration: none;
+}
