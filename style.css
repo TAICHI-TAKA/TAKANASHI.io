@@ -335,6 +335,34 @@ footer .container{
     padding:  40px 20px;
 }
 
+/* サイト情報とフッターメニューを横に並べる(1) 135P*/
+@media (min-width: 768px){
+    footer .container{
+        display: flex;
+        flex-wrap: wrap;
+
+/* コンテンツと横幅を揃える 137P */
+        max-width: 1000px;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/* サイト情報とフッターメニューを横に並べる(2) 136P*/
+.footA {
+        flex: 0 0 40%;
+    }
+
+    .footB {
+        flex: 0 0 60%;
+    }
+
+    .footC {
+        flex: 0 0 100%;
+    }
+
+}
+
 /* 見出しに下線を付けたデザインにする 120P */
 .footA {
     margin-bottom: 30px;
@@ -394,12 +422,24 @@ footer .container{
     background-color: rgba(0,0,0,0.3);
 }
 
-@media (min-width: 768p){
-    .footB {
+/* フッターメニューを横に並べる 127P */
+@media (min-width: 768px) {
+    .footB{
         display: flex;
     }
 
-    .footB div {
+    .footB div{
         flex: 1;
     }
+
+    .footB div:not(:first-child) {
+        margin-left: 40px;
+    }
+}
+
+/* コピーライトのデザインを指定する 133P */
+.footC {
+    font-size: 12px;
+    text-align: center;
+    font-family: "ロボト", sans-serif;
 }
