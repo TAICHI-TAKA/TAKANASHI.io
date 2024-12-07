@@ -1,42 +1,38 @@
 @charset "UTF-8";
 
 /* 基本色 */
-:root{
-        --main-color: #5D9AD2;
-        --accent-color: #DF6A7A;
-        --dark-color: #2B5566;
+:root {
+    --main-color: #5D9AD2;
+    --accent-color: #DF6A7A;
+    --dark-color: #2B5566;
 
-        /* テキストを白色にする 53P */
-        --text-bright-color:#fff;
+    /* テキストを白色にする 53P */
+    --text-bright-color: #fff;
 
-        /* 横幅の最大値を指定する 80P */
-        --large-width: 1700px;
-
-    }
+    /* 横幅の最大値を指定する 80P */
+    --large-width: 1700px;
+}
 
 /* 基本設定:: ページ全体 */
 body {
-        /* 画像を画面の横幅いっぱいに表示 50P */
-        margin: 0;
+    /* 画像を画面の横幅いっぱいに表示 50P */
+    margin: 0;
 
-    font-family: "メイリオ",
-        "Hiragino Kaku Gothic Pro",
-        sans-serif;
-
-    }
+    font-family: "メイリオ", "Hiragino Kaku Gothic Pro", sans-serif;
+}
 
 /* ヘッダーをヒーローイメージに重ねる 152P */
-header{
+header {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
     width: 100%;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 /* サイト名のデザインを指定する 151P */
-.headA{
+.headA {
     display: inline-block;
     line-height: 70px;
     padding-left: 20px;
@@ -45,20 +41,20 @@ header{
     background-color: var(--main-color);
     color: #fff;
     color: var(--text-bright-color);
-    font-family: "Montserrat",sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     text-decoration: none;
 }
 
 /* メニューの標準のデザインを解除する 158P */
 /* リンクを大きくする 159P */
-.headB ul{
+.headB ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.headB a{
+.headB a {
     display: block;
     padding: 15px;
     color: inherit;
@@ -66,15 +62,15 @@ header{
     text-decoration: none;
 }
 
-.headB a:hover{
-    background-color: rgba(0,0,0,0.1);
+.headB a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* ナビゲーションメニューのリンクを横に並べる 161P */
-@media (min-width: 768px){
-    header .container{
+@media (min-width: 768px) {
+    header .container {
         display: flex;
-        align-items:center;
+        align-items: center;
         justify-content: space-between;
         /* コンテンツBと横幅を揃える 93P */
         max-width: 1000px;
@@ -83,7 +79,8 @@ header{
         margin-right: auto;
 
     }
-    .headB ul{
+
+    .headB ul {
         display: flex;
     }
 }
@@ -91,33 +88,33 @@ header{
 
 /* コンテンツA: ヒーローイメージ */
 .conA {
-        /* 背景画像として画像を表示する 49P */
-        /* 半透明な黒色の画像を重ねてトーンを落とす 54P */
-        background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(img/classA.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;   
+    /* 背景画像として画像を表示する 49P */
+    /* 半透明な黒色の画像を重ねてトーンを落とす 54P */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(img/classA.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-        /* 画像を画面の高さいっぱいに表示する 50P */
-        height: 100vh;
+    /* 画像を画面の高さいっぱいに表示する 50P */
+    height: 100vh;
 
-        /* 最小限確保する高さを指定する 51P */
-        min-height: 450px;
+    /* 最小限確保する高さを指定する 51P */
+    min-height: 450px;
 
-        /* テキストを画像の中央配置にする 52P */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    /* テキストを画像の中央配置にする 52P */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        /* テキストを白色をする 53P */
-        color:#fff;
-        color:var(--text-bright-color);
+    /* テキストを白色をする 53P */
+    color: #fff;
+    color: var(--text-bright-color);
 
     text-align: center;
 }
 
 .conA h1 {
-    font-family: "ロボト",sans-serif;
+    font-family: "ロボト", sans-serif;
     font-size: 15vw;
     letter-spacing: 0.2em;
     margin: 0 auto;
@@ -129,162 +126,179 @@ header{
     font-size: 18%;
 }
 
-@media (min-width: 768px){
-    .conA h1{
+@media (min-width: 768px) {
+    .conA h1 {
         font-size: 95px;
     }
 
-    .conA p{
+    .conA p {
         font-size: 40px;
     }
-} 
+}
 
 
 /* コンテンツC:概要(アイコン+テキスト) */
 
-.conB .container{
-    padding-top: 5px;
+.conB .container {
     height: 60vh;
 }
 
 
 /* PROFILEに下線入れる */
-.underline_double{
+.underline_double {
     text-decoration: underline #000000;
     text-underline-offset: 0.5ex;
 }
 
-.conB h2{
+.conB h2 {
     /* 見出しと文章のデザインを指定する 68P */
     font-size: 50px;
 }
 
 
-.conB p{
-        /* 見出しと文章のデザインを指定する 68P */
-        margin-top: 100px;
-        font-size: 21px;
+.conB p {
+    /* 見出しと文章のデザインを指定する 68P */
+    font-size: 21px;
+    margin-bottom: 80px;
 }
 
-@media (min-width:768px){
-    .conB{
-    /* <!-- 画像を横に並べる --> */
-    .container{
-    display: flex;
-    max-height: 1000px;
-    width: 100%;
-}
+@media (min-width:768px) {
+    .conB {
 
-    .imgOYA{
-        width: 100%;
-        background-color: #bcd8e9be;
-        margin: 0 auto;
-    }
+        /* <!-- 画像を横に並べる --> */
+        .container {
+            display: flex;
+            max-height: 1000px;
+            width: 100%;
+        }
 
-    .container img{
-    width: 50%;
-    justify-content: space-around;
-    border: solid 5px  #DF6A7A;
-    border-radius: 10px;
-    }
+        .imgOYA {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            background-color: #bcd8e9be;
+            margin: 0 auto;
+        }
 
-    .text {
-    width: 100%;
-    background-color: #fff;
+        img {
+            width: 50%;
+            border: solid 5px #DF6A7A;
+            border-radius: 10px;
+        }
+
+        .text {
+            display: flex;
+            flex-flow:column;
+            justify-content: center;
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+            align-items: center;
+        }
     }
-}
 }
 
 
 /* コンテンツC:概要(アイコン+テキスト:逆配置) */
 
-.conC .container{
-    padding-top: 5px;
+.conC .container {
     height: 60vh;
 }
 
 /* PROFILEに下線入れる */
-.underline_double{
+.underline_double {
     text-decoration: underline #000000;
     text-underline-offset: 0.5ex;
 }
 
-.conC h2{
+.conC h2 {
     /* 見出しと文章のデザインを指定する 68P */
     font-size: 50px;
 }
 
-.conC p{
+.conC p {
     /* 見出しと文章のデザインを指定する 68P */
-    margin-top: 100px;
     font-size: 21px;
+    margin-bottom: 80px;
 }
 
-@media (min-width:768px){
-.conC{
-    /* <!-- 画像を横に並べる --> */
-    .container{
-    display: flex;
-    /* flex-direction: row-reverse; */
-    max-height: 1000px;
-    width: 100px;
+@media (min-width:768px) {
+    .conC {
+
+        /* <!-- 画像を横に並べる --> */
+        .container {
+            display: flex;
+            max-height: 1000px;
+            width: 100%;
+        }
+
+        .imgOYA {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            width: 100%;
+            background-color: #bcd8e9be;
+            margin: 0 auto;
+        }
+
+        .text {
+            display: flex;
+            flex-flow:column;
+            justify-content: center;
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+            align-items: center;
+        }
+    }
 }
 
-.imgOYA{
-    width: 100%;
-    background-color: #bcd8e9be;
-    margin: 0 auto;
-}
 
-.text {
-    width: 100%;
-    background-color: #fff;
-} 
-
-}
-}
 /* コンテンツC:概要(アイコン+テキスト) */
-.conD{
+.conD {
     /* ブロックに色を付ける 88P */
     background-color: #5D9AB2;
-    
-    .container{
-            display: flex;
-            justify-content: center;
-            max-width: 1000px;
-            max-width: var(--large-width);
-            margin-left: auto;
-            margin-right: auto;
-            height: 60vh;
 
-        }
-        .card{
-            width: 500px;
-            height: 500px;
-            border: 5px solid #DF6A7A;
-        }
+    .container {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        max-width: 1000px;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+        height: 60vh;
+    }
 
-        .card:nth-child(2){
-            margin-right: 200px;
-            margin-left: 200px;
-        }
+    .card {
+        width: 500px;
+        height: 500px;
+        border: 5px solid #DF6A7A;
+    }
 
-        .picture img{
-            width: 100%;
-            height: 300px;
-        }
+    .card:nth-child(2) {
+        margin-right: 200px;
+        margin-left: 200px;
+    }
 
-        .description{
-            width: 100%;
-            height: 192px;
-            padding-right: 12px;
-            padding-left: 12px;
-            box-sizing: border-box;
-            font-size: 20px;
-            background-color: #fff;
-            padding-top: 5px;
-        }
+    .picture img {
+        width: 100%;
+        height: 300px;
+    }
 
+    .description {
+        width: 100%;
+        height: 192px;
+        padding-right: 12px;
+        padding-left: 12px;
+        box-sizing: border-box;
+        font-size: 20px;
+        background-color: #fff;
+        padding-top: 5px;
+    }
 }
 
 /* フッターの色を指定する 115P */
@@ -296,25 +310,25 @@ footer {
 }
 
 /* フッター内の余白サイズを指定する 115P */
-footer .container{
-    padding:  40px 20px;
+footer .container {
+    padding: 40px 20px;
 }
 
 /* サイト情報とフッターメニューを横に並べる(1) 135P*/
-@media (min-width: 768px){
-    footer .container{
+@media (min-width: 768px) {
+    footer .container {
         display: flex;
         flex-wrap: wrap;
 
-/* コンテンツと横幅を揃える 137P */
+        /* コンテンツと横幅を揃える 137P */
         max-width: 1000px;
         max-width: var(--large-width);
         margin-left: auto;
         margin-right: auto;
     }
 
-/* サイト情報とフッターメニューを横に並べる(2) 136P*/
-.footA {
+    /* サイト情報とフッターメニューを横に並べる(2) 136P*/
+    .footA {
         flex: 0 0 40%;
     }
 
@@ -325,7 +339,6 @@ footer .container{
     .footC {
         flex: 0 0 100%;
     }
-
 }
 
 /* 見出しに下線を付けたデザインにする 120P */
@@ -334,22 +347,22 @@ footer .container{
 }
 
 /* 見出しと段落のデザインを指定する 112P */
-.footA h2{
+.footA h2 {
     margin-top: 0;
     margin-bottom: 10px;
-    font-family: "ロボト",sans-serif;
+    font-family: "ロボト", sans-serif;
     font-size: 30px;
     letter-spacing: 0.2em;
 }
 
-.footA p{
+.footA p {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 14px;
 }
 
 /* リンクのデザインを指定する 113P */
-.footA a{
+.footA a {
     color: inherit;
     text-decoration: none;
 }
@@ -363,7 +376,7 @@ footer .container{
 .footB h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    border-bottom:  solid 1px currentColor;
+    border-bottom: solid 1px currentColor;
     font-size: 14px;
 }
 
@@ -384,16 +397,16 @@ footer .container{
 }
 
 .footB a:hover {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* フッターメニューを横に並べる 127P */
 @media (min-width: 768px) {
-    .footB{
+    .footB {
         display: flex;
     }
 
-    .footB div{
+    .footB div {
         flex: 1;
     }
 
